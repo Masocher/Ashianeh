@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashianeh</title>
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body dir="rtl">
+    <main>
+        <div class="black_layer" onclick="dontShowCategories(), dontShowCbr()"></div>
+
+        <div class="categories_menu">
+            <div class="title_box">
+                <div class="main_title">دسته بندی محصولات</div>
+                <i class="fa-solid fa-xmark" onclick="dontShowCategories()"></i>
+            </div>
+
+            <div class="categories">
+                <div class="category categ_1" onclick="cbr_1.classList.add('show')">کتاب کمک درسی <i class="fa-solid fa-angle-left"></i></div>
+                <div class="category categ_2" onclick="cbr_2.classList.add('show')">کتاب درسی <i class="fa-solid fa-angle-left"></i></div>
+                <div class="category categ_3" onclick="cbr_3.classList.add('show')">دی وی دی آموزشی <i class="fa-solid fa-angle-left"></i></div>
+                <div class="category categ_4" onclick="cbr_4.classList.add('show')">ناشران <i class="fa-solid fa-angle-left"></i></div>
+                <div class="category categ_5" onclick="cbr_5.classList.add('show')">بازی فکری <i class="fa-solid fa-angle-left"></i></div>
+                <div class="category categ_6" onclick="cbr_6.classList.add('show')">کتاب داستان <i class="fa-solid fa-angle-left"></i></div>
+                <div class="category categ_7" onclick="cbr_7.classList.add('show')">کتاب کنکور 1403<i class="fa-solid fa-angle-left"></i></div>
+                <div class="category categ_8" onclick="cbr_8.classList.add('show')">کتاب زبان انگلیسی <i class="fa-solid fa-angle-left"></i></div>
+                <div class="category categ_9">لوازم التحریر</div>
+                <div class="category categ_10">کتاب مخصوص آزمون تیزهوشان 1402</div>
+                <div class="category categ_11">کتاب آزمون استخدامی</div>
+                <div class="category categ_12">جزوه درسی</div>
+            </div>
+
+            <div class="cbr_1 cbr">
+                <div class="title_box">
+                    <div class="main_title">کتاب کمک درسی</div>
+                    <i class="fa-solid fa-angle-right" onclick="cbr_1.classList.remove('show')"></i>
+                </div>
+            </div>
+
+            <div class="cbr_2 cbr">
+                <div class="title_box">
+                    <div class="main_title">کتاب درسی</div>
+                    <i class="fa-solid fa-angle-right" onclick="cbr_2.classList.remove('show')"></i>
+                </div>
+            </div>
+
+            <div class="cbr_3 cbr">
+                <div class="title_box">
+                    <div class="main_title">دی وی دی آموزشی</div>
+                    <i class="fa-solid fa-angle-right" onclick="cbr_3.classList.remove('show')"></i>
+                </div>
+            </div>
+
+            <div class="cbr_4 cbr">
+                <div class="title_box">
+                    <div class="main_title">ناشران</div>
+                    <i class="fa-solid fa-angle-right" onclick="cbr_4.classList.remove('show')"></i>
+                </div>
+            </div>
+
+            <div class="cbr_5 cbr">
+                <div class="title_box">
+                    <div class="main_title">بازی فکری</div>
+                    <i class="fa-solid fa-angle-right" onclick="cbr_5.classList.remove('show')"></i>
+                </div>
+            </div>
+
+            <div class="cbr_6 cbr">
+                <div class="title_box">
+                    <div class="main_title">کتاب داستان</div>
+                    <i class="fa-solid fa-angle-right" onclick="cbr_6.classList.remove('show')"></i>
+                </div>
+            </div>
+
+            <div class="cbr_7 cbr">
+                <div class="title_box">
+                    <div class="main_title">کتاب کنکور 1403</div>
+                    <i class="fa-solid fa-angle-right" onclick="cbr_7.classList.remove('show')"></i>
+                </div>
+            </div>
+
+            <div class="cbr_8 cbr">
+                <div class="title_box">
+                    <div class="main_title">کتاب زبان انگلیسی</div>
+                    <i class="fa-solid fa-angle-right" onclick="cbr_8.classList.remove('show')"></i>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <div class="top_section">
+                <div class="logo_box"><img src="../images/all/logo.png" alt="logo"><div class="logo_text">آشیانه</div></div>
+    
+                <div class="search_box">
+                    <input type="text" placeholder="جستجو کنید ...">
+                    <div class="search_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </div>
+    
+                <div class="for_user_box">
+                    <div class="phone_number"><span>تلفن آشیانه :</span><div><div><span>۶۶۴۸۳۸۳۸</span> - ۰۲۱</div> <i class="fa-solid fa-phone-volume"></i></div></div>
+    
+                    <div class="user_pannel"><i class="fa-solid fa-user"></i></div>
+    
+                    <div class="user_cart" onmouseenter="showCart()" onmouseleave="dontShowCart()"><i class="fa-solid fa-cart-shopping"></i></div>
+                </div>
+            </div>
+    
+            <div class="bottom_section">
+                <div class="categories_box" onclick="showCategories()"><i class="fa-solid fa-list"></i> دسته بندی محصولات</div>
+
+                <ul class="header_menu_box">
+                    <li>خرید کتاب درسی</li>
+                    <li>وبلاگ</li>
+                    <li>آموزش خرید</li>
+                    <li>پیگیری سفارش</li>
+                </ul>
+
+                <div class="last_notifications" onmouseenter="showNotifs()" onmouseleave="dontShowNotifs()"><i class="fa-solid fa-bell"></i> آخرین اطلاعیه ها</div>
+            </div>
+
+            <div class="cart_box_wrapper" onmouseenter="status ? showCart() : null" onmouseleave="
+                dontShowCart()
+                status = false
+            ">
+                <div class="cart_box">
+                    <img src="../images/others/empty-cart.svg" alt="empty_cart">
+                    متاسفانه سبد خرید شما خالی است
+                    <div class="best_sellers_link">برو به پرفروش ترین ها <i class="fa-solid fa-angle-left"></i></div>
+                </div>
+            </div>
+
+            <div class="last_notifications_box" onmouseenter="status2 ? showNotifs() : null" onmouseleave="
+                dontShowNotifs()
+                status2 = false
+            ">
+                <ul class="notifs">
+                    <div class="notif_boxes">
+                        <div class="notif_box">
+                            <li>ارسال رایگان</li>
+                            <div class="notif_description">ارسالمون در صورتی رایگان میشه که بالای ۵۰۰ هزارتومان خرید کنید</div>
+                            <div class="date_box"><i class="fa-solid fa-calendar"></i> ۳۰ تیر ۱۴۰۲</div>
+                        </div>
+    
+                        <div class="notif_box">
+                            <li>ارسال رایگان</li>
+                            <div class="notif_description">ارسالمون در صورتی رایگان میشه که بالای ۵۰۰ هزارتومان خرید کنید</div>
+                            <div class="date_box"><i class="fa-solid fa-calendar"></i> ۳۰ تیر ۱۴۰۲</div>
+                        </div>
+    
+                        <div class="notif_box">
+                            <li>ارسال رایگان</li>
+                            <div class="notif_description">ارسالمون در صورتی رایگان میشه که بالای ۵۰۰ هزارتومان خرید کنید</div>
+                            <div class="date_box"><i class="fa-solid fa-calendar"></i> ۳۰ تیر ۱۴۰۲</div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </header>
+    </main>
+
+    <script>
+        // cart box
+        let blackLayer = document.querySelector(".black_layer")
+        let cartBox = document.querySelector('.cart_box')
+
+        let status = false
+
+        let showCart = () => {
+            blackLayer.classList.add("show")
+            cartBox.classList.add("show")
+            status = true
+        }
+
+        let dontShowCart = () => {
+            blackLayer.classList.remove("show")
+            cartBox.classList.remove("show")
+        }
+
+        // notifications box
+        let notifsBox = document.querySelector(".notifs")
+
+        let status2 = false
+
+        let showNotifs = () => {
+            blackLayer.classList.add("show")
+            notifsBox.classList.add("show")
+            status2 = true
+        }
+
+        let dontShowNotifs = () => {
+            blackLayer.classList.remove("show")
+            notifsBox.classList.remove("show")
+        }
+
+        // categories box
+        let categoriesBox = document.querySelector(".categories_menu")
+        let cbrs = document.querySelectorAll(".cbr")
+
+        let cbr_1 = document.querySelector(".cbr_1")
+        let cbr_2 = document.querySelector(".cbr_2")
+        let cbr_3 = document.querySelector(".cbr_3")
+        let cbr_4 = document.querySelector(".cbr_4")
+        let cbr_5 = document.querySelector(".cbr_5")
+        let cbr_6 = document.querySelector(".cbr_6")
+        let cbr_7 = document.querySelector(".cbr_7")
+        let cbr_8 = document.querySelector(".cbr_8")
+
+        let showCategories = () => {
+            categoriesBox.classList.add("show")
+            blackLayer.classList.add("show2")
+        }
+
+        let dontShowCategories = () => {
+            blackLayer.classList.remove("show2")
+            categoriesBox.classList.remove("show")
+        }
+
+        let dontShowCbr = () => {
+            cbrs.forEach(cbr => cbr.classList.remove("show"))
+        }
+    </script>
+</body>
+</html>
