@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/signs.css">
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container show" dir="rtl">
+        <div class="title_box">
+            <a href="./home.html" class="logo_box"><img src="../images/all/logo.png" alt="logo"><div class="logo_text">آشیانه</div></a>
+            <div class="description">سلام رفیق. اگه عضو آشیانه هستی وارد شو.</div>
+        </div>
+
+        <div class="sign_up_buttons">
+            <div class="s_u_b_1" onclick="changeStatus(false)">با شماره تلفن</div>
+            <div class="s_u_b_2" onclick="changeStatus(true)">با ایمیل</div>
+        </div>
+
+        <form class="phone_sign_up_form" action="#">
+            <div class="input_box">
+                <label for="phone_number">شماره تلفن</label>
+                <input type="text" id="phone_number" placeholder="شماره تلفن خودرا وارد کنید">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <div class="input_box">
+                <label for="password_1">رمز عبور</label>
+                <input type="password" id="password_1" placeholder="رمز عبور را وارد کنید">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <button class="submit_btn" onclick="sendCode(false)">ورود</button>
+        </form>
+
+        <form class="email_sign_up_form" action="#">
+            <div class="input_box">
+                <label for="email_i">ایمیل</label>
+                <input type="email" id="email_i" placeholder="ایمیل خودرا وارد کنید">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="input_box">
+                <label for="password_1">رمز عبور</label>
+                <input type="password" id="password_1" placeholder="رمز عبور را وارد کنید">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <button class="submit_btn" onclick="sendCode(true)">ورود</button>
+        </form>
+
+        <div class="sign_link">عضو نیستی ؟ <a href="./sign-up.html">ثبت نام کن</a></div>
+    </div>
+
+    <div class="container_2">
+        <div class="phone_code">
+            <div class="title_box">کد پیامک شده را وارد کنید</div>
+            <form action="#">
+                <input maxlength="6" class="code_input" type="text" placeholder="------">
+                <button class="submit_btn_2">ثبت کد</button>
+            </form>
+        </div>
+
+        <div class="email_code">
+            <div class="title_box">کد ارسال شده به ایمیل را وارد کنید</div>
+            <form action="#">
+                <input maxlength="6" class="code_input" type="text" placeholder="------">
+                <button class="submit_btn_2">ثبت کد</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // email or phone number form
+        let sub1 = document.querySelector(".s_u_b_1")
+        let sub2 = document.querySelector(".s_u_b_2")
+
+        let phoneSignUpForm = document.querySelector(".phone_sign_up_form")
+        let emailSignUpForm = document.querySelector(".email_sign_up_form")
+
+        let status = false
+
+        let changeStatus = (s) => {
+            status = s
+
+            if (status == false) {
+                sub1.classList.add("show")
+                phoneSignUpForm.classList.add("show")
+                sub2.classList.remove("show")
+                emailSignUpForm.classList.remove("show")
+            } else {
+                sub1.classList.remove("show")
+                phoneSignUpForm.classList.remove("show")
+                sub2.classList.add("show")
+                emailSignUpForm.classList.add("show")
+            }
+        }
+
+        // sending code
+        let container = document.querySelector(".container")
+        let container2 = document.querySelector(".container_2")
+
+        let phoneCode = document.querySelector(".phone_code")
+        let emailCode = document.querySelector(".email_code")
+
+        let sendCode = (s) => {
+            container.classList.remove("show")
+            container2.classList.add("show")
+
+            if (s == true) {
+                phoneCode.classList.remove("show")
+                emailCode.classList.add("show")
+            } else {
+                phoneCode.classList.add("show")
+                emailCode.classList.remove("show")
+            }
+        }
+    </script>
+</body>
+</html>
