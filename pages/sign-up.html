@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <link rel="stylesheet" href="../styles/signs.css">
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container show" dir="rtl">
+        <div class="title_box">
+            <a href="./home.html" class="logo_box"><img src="../images/all/logo.png" alt="logo"><div class="logo_text">آشیانه</div></a>
+            <div class="description">به آشیانه خوش آمدید. حساب خودرا بسازید.</div>
+        </div>
+
+        <div class="sign_up_buttons">
+            <div class="s_u_b_1" onclick="changeStatus(false)">با شماره تلفن</div>
+            <div class="s_u_b_2 show" onclick="changeStatus(true)">با ایمیل</div>
+        </div>
+
+        <form class="phone_sign_up_form" action="#">
+            <div class="input_box">
+                <label for="user_name">نام کاربری</label>
+                <input type="text" id="user_name" placeholder="نام کاربری را وارد کنید">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input_box">
+                <label for="phone_number">شماره تلفن</label>
+                <input type="text" id="phone_number" placeholder="شماره تلفن خودرا وارد کنید">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <div class="input_box">
+                <label for="password_1">رمز عبور</label>
+                <input type="password" id="password_1" placeholder="رمز عبور را وارد کنید">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <button class="submit_box"><a class="submit_btn" href="./send-phone-code.html">ثبت نام</a></button>
+        </form>
+
+        <form class="email_sign_up_form show" action="#">
+            <div class="input_box">
+                <label for="user_name">نام کاربری</label>
+                <input type="text" id="user_name" placeholder="نام کاربری را وارد کنید">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="input_box">
+                <label for="email_i">ایمیل</label>
+                <input type="email" id="email_i" placeholder="ایمیل خودرا وارد کنید">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="input_box">
+                <label for="password_1">رمز عبور</label>
+                <input type="password" id="password_1" placeholder="رمز عبور را وارد کنید">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <button class="submit_box"><a class="submit_btn" href="./send-email-code.html">ثبت نام</a></button>
+        </form>
+
+        <div class="sign_link">قبلا حساب ساختی ؟ <a href="./sign-in.html">وارد شو</a></div>
+    </div>
+
+    <script>
+        let sub1 = document.querySelector(".s_u_b_1")
+        let sub2 = document.querySelector(".s_u_b_2")
+
+        let phoneSignUpForm = document.querySelector(".phone_sign_up_form")
+        let emailSignUpForm = document.querySelector(".email_sign_up_form")
+
+        let status = false
+
+        let changeStatus = (s) => {
+            status = s
+
+            if (status == false) {
+                sub1.classList.add("show")
+                phoneSignUpForm.classList.add("show")
+                sub2.classList.remove("show")
+                emailSignUpForm.classList.remove("show")
+            } else {
+                sub1.classList.remove("show")
+                phoneSignUpForm.classList.remove("show")
+                sub2.classList.add("show")
+                emailSignUpForm.classList.add("show")
+            }
+        }
+    </script>
+</body>
+</html>
