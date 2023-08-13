@@ -1,0 +1,369 @@
+.cart_box_information {
+    width: 1280px;
+    margin-top: 30px;
+}
+
+.has_product {
+    display: none;
+    justify-content: space-between;
+}
+.has_product.show {
+    display: flex;
+}
+
+.has_not_product {
+    display: none;
+}
+.has_not_product.show {
+    display: block;
+}
+
+.cart_box_sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart_box_sec img {
+    margin-bottom: 20px;
+}
+
+.alert_box {
+    width: calc(100% - 50px);
+    background-color: #ff834a09;
+    color: #ff824a;
+    padding: 17px 25px;
+    border: 1px solid #ff834a65;
+    border-radius: 16px;
+    margin: 0 0 70px 0;
+}
+
+.pay_box_wrapper {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pay_box_wrapper .service_box {
+    justify-content: center;
+    background-color: #ff834a09;
+    border: 1px solid #ff834a65;
+    padding: 40px 0;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.pay_box {
+    background-color: #fff;
+    width: calc(100% - 60px);
+    border: 1px solid #e5ecf1;
+    border-radius: 20px;
+    padding: 40px 30px;
+    height: fit-content;
+}
+
+.offer_code_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5ecf1;
+}
+
+.offer_code_box input {
+    font-family: yekanbakh;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    outline: 0;
+    width: calc(71% - 30px);
+    transition: .2s;
+    border: 1px solid #e5ecf1;
+    border-radius: 5px;
+}
+.offer_code_box input:focus {
+    border-color: #ff824a;
+}
+
+.offer_code_box button {
+    font-family: yekanbakh;
+    background-color: #ff824a;
+    color: #fff;
+    border-radius: 5px;
+    width: 25%;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+.offer_code_box button:hover {
+    background-color: #333;
+}
+
+.pay_values {
+    width: 100%;
+    border-bottom: 1px solid #e5ecf1;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.pay_value {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.price_box {
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.tooman {
+    margin: 3px 4px 0 0;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 0;
+}
+
+.offer_box {
+    color: #ff2400;
+}
+.offer_box_2 {
+    color: #ff824a;
+}
+
+.pay_btn {
+    background-color: #ff824a;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+    margin-top: 30px;
+}
+.pay_btn:hover {
+    background-color: #333;
+}
+
+.cart_products {
+    width: 67%;
+}
+
+.product_box {
+    width: calc(100% - 120px);
+    border-radius: 16px;
+    background-color: #fff;
+    border: 1px solid #e5ecf1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px 20px 80px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+.product_box:hover {
+    border-color: #ff824a;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.image_box {
+    width: 95px;
+    height: 120px;
+}
+.image_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.product_box .title_box {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 30px;
+    transition: .2s;
+}
+.product_box .title_box:hover {
+    color: #ff824a;
+}
+
+.product_box .price_box {
+    font-size: 28px;
+}
+
+.delete_btn {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #333;
+    font-size: 18px;
+}
+.delete_btn:hover {
+    color: #ff2400;
+}
+
+@media (max-width: 1361px) {
+    .cart_box_information {
+        width: 1000px;
+        transition: .4s;
+    }
+}
+
+@media (max-width: 1051px) {
+    .cart_box_information {
+        width: 800px;
+    }
+
+    .pay_box, .price_box {
+        font-size: 14px;
+    }
+
+    .tooman {
+        font-size: 12px;
+    }
+
+    .offer_code_box button, .offer_code_box input {
+        font-size: 12px;
+    }
+
+    .product_box .title_box, .product_box .price_box, .delete_btn {
+        font-size: 16px;
+    }
+    
+    .product_box {
+        padding-left: 30px;
+        width: calc(100% - 70px);
+    }
+
+    .delete_btn {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1049px) {
+    .cart_box_information {
+        width: calc(100% - 100px);
+    }
+}
+
+@media (max-width: 900px) {
+    .has_product {
+        flex-direction: column-reverse;
+        transition: .4s;
+    }
+
+    .pay_box_wrapper {
+        width: 100%;
+        flex-direction: row;
+        margin-bottom: 30px;
+        transition: .4s;
+    }
+
+    .pay_box_wrapper .service_box {
+        display: none;
+    }
+    
+    .cart_products {
+        width: 100%;
+        transition: .4s;
+    }
+
+    .price_box {
+        font-size: 20px;
+    }
+
+    .pay_box {
+        font-size: 16px;
+    }
+
+    .tooman {
+        font-size: 14px;
+    }
+
+    .offer_code_box button, .offer_code_box input {
+        font-size: 14px;
+    }
+
+    .product_box {
+        padding-left: 50px;
+        width: calc(100% - 90px);
+    }
+
+    .product_box .price_box {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 501px) {
+    .product_box {
+        flex-direction: column;
+        padding: 30px 20px;
+        width: calc(100% - 40px);
+        transition: .4s;
+    }
+
+    .product_box .title_box {
+        margin: 15px 0;
+    }
+
+    .row_1 {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 426px) {
+    .cart_box_information {
+        margin-top: 50px;
+    }
+
+    .cart_box_information {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 321px) {
+    .alert_box {
+        font-size: 14px;
+    }
+
+    .pay_box, .price_box {
+        font-size: 14px;
+    }
+
+    .tooman {
+        font-size: 12px;
+    }
+
+    .offer_code_box button, .offer_code_box input {
+        font-size: 12px;
+    }
+
+    .offer_code_box input {
+        width: calc(65% - 30px);
+    }
+
+    .offer_code_box button {
+        width: 30%;
+    }
+
+    .product_box .title_box, .product_box .price_box, .delete_btn {
+        font-size: 16px;
+    }
+}
